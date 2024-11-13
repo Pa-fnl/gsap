@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation Légère avec GSAP</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <!-- GSAP gratuit -->
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -22,8 +22,8 @@
         font-size: 48px;
         font-weight: bold;
         color: #3498db;
-        opacity: 0; /* Commence avec l'opacité à 0 */
-        transform: translateY(50px); /* Commence légèrement plus bas */
+        opacity: 0;
+        transform: translateY(50px);
       }
     </style>
   </head>
@@ -31,13 +31,12 @@
     <div class="text">Bienvenue sur mon site !</div>
 
     <script>
-      // Animation GSAP - Le texte apparaît doucement avec un léger mouvement
       gsap.to(".text", {
-        opacity: 1, // Le texte devient visible
-        y: 0, // Déplace le texte de bas en haut
-        duration: 1.5, // Durée de l'animation
-        ease: "power2.out", // Utilisation d'une fonction d'animation douce
-        delay: 0.3, // Délai avant de commencer l'animation
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        delay: 0.3,
       });
     </script>
   </body>
