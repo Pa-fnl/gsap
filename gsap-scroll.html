@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+      }
+      section {
+        height: 100vh;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+      .parallax {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Scroll Down</h1>
+      <div class="parallax">
+        <img src="card-design1.png" alt="Kitten" />
+      </div>
+    </section>
+
+    <section>
+      <h1>More Content</h1>
+      <p>Keep scrolling for more...</p>
+    </section>
+
+    <script>
+      gsap.to(".parallax", {
+        yPercent: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "section",
+          start: "top bottom", // commence dès que l'élément atteint le bas de l'écran
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    </script>
+  </body>
+</html>

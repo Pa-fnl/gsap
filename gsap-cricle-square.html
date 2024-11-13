@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #ecf0f1;
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+        background-color: #e74c3c;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+
+    <script>
+      const circle = document.querySelector(".circle");
+      circle.addEventListener("click", () => {
+        gsap.to(circle, {
+          duration: 1,
+          borderRadius: "0%",
+          x: 200, // Déplace le cercle sur l'axe X
+          scale: 1.5,
+          rotation: 360,
+          ease: "bounce.out",
+        });
+      });
+    </script>
+  </body>
+</html>

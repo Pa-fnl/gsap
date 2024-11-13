@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fil Conducteur avec GSAP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  </head>
+  <body>
+    <h1>Fil rouge des CDUI</h1>
+    <svg class="path" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <!-- Création du chemin en forme de courbe -->
+      <path
+        id="motionPath"
+        d="M50 250 C 150 150, 350 150, 450 250 S 350 350, 450 450"
+      />
+    </svg>
+    <div class="ball"></div>
+  </body>
+</html>

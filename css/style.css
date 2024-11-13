@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+.path {
+  stroke: #ff0000;
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.7;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #087423;
+  border-radius: 50%;
+  position: absolute;
+}

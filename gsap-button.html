@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Hover Animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f7f7f7;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Hover Me!</button>
+
+    <script>
+      const btn = document.querySelector(".btn");
+
+      btn.addEventListener("mouseenter", () => {
+        gsap.to(btn, { scale: 1.2, backgroundColor: "#2ecc71", duration: 0.3 });
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        gsap.to(btn, { scale: 1, backgroundColor: "#3498db", duration: 0.3 });
+      });
+    </script>
+  </body>
+</html>
