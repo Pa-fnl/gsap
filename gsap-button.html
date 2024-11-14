@@ -34,13 +34,13 @@
     </style>
   </head>
   <body>
-    <button class="btn">Hover Me!</button>
+    <button class="btn">HEY !</button>
 
     <script>
       const btn = document.querySelector(".btn");
 
       btn.addEventListener("mouseenter", () => {
-        gsap.to(btn, { scale: 1.2, backgroundColor: "#2ecc71", duration: 0.3 });
+        gsap.to(btn, { scale: 5, backgroundColor: "#2ecc71", duration: 0.3 });
       });
 
       btn.addEventListener("mouseleave", () => {
